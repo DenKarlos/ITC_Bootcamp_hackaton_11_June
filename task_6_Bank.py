@@ -3,7 +3,8 @@ from datetime import timedelta
 
 
 def credit():
-    str_dtm = input('Введите дату для оформления кредита в формате: ГГГГ-ММ-ДД ЧЧ:ММ -> ')
+    str_dtm = input(
+        'Введите дату для оформления кредита в формате: ГГГГ-ММ-ДД ЧЧ:ММ -> ')
     # str_dtm = '1991-02-14 02:00'
     try:
         dtm = datetime.strptime(str_dtm, '%Y-%m-%d %H:%M')
@@ -19,5 +20,6 @@ def credit():
         result = 'Вы ввели неверный формат даты'
 
     return result
+
 
 print(credit())
