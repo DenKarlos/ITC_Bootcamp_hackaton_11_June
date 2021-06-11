@@ -9,6 +9,7 @@ def kyrgyzstan():
 def bishkek():
     return "Hello Bishkek"
 
+
 user_tip = """Введите одну из функций:
 world()
 kyrgyzstan()

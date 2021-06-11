@@ -1,6 +1,7 @@
 from stdiomask import getpass
 from datetime import datetime
 
+
 class Logger:
     def __init__(self):
         self.login = ''
@@ -13,7 +14,7 @@ class Logger:
             self.login = ''
         else:
             self._passwording()
-    
+
     def _passwording(self):
         while len(self.password) < 8:
             self.password = getpass('Input password (> 7 symbols) -> ')
@@ -29,19 +30,16 @@ class Logger:
             return True
         else:
             return False
-    
+
     def _log_to_file(self, filename='users.txt'):
-        with open(filename,'a') as fl:
+        with open(filename, 'a') as fl:
             print(f'Login: {self.login} - Password: {self.password}', file=fl)
 
     def _log_time(self, filename='log.txt'):
-        with open(filename,'a') as fl:
+        with open(filename, 'a') as fl:
             time = datetime.time(datetime.now())
             print(f'User registered successfully {time}', file=fl)
 
 
-
 sim_log = Logger()
 sim_log.to_log()
-
-
